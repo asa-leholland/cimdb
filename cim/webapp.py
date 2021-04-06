@@ -55,8 +55,7 @@ webapp.secret_key = 'Team CS Cats'
 login_manager = flask_login.LoginManager()
 login_manager.init_app(webapp)
 
-# Create a connection to the database
-db_connection = db.connect_to_database()
+
 
 
 # Load dummy data for the webpages to reference
@@ -844,6 +843,8 @@ def site_management():
 
 	# Load site results from the database (or the dummy data if the database doesn't work)
 	site_results = dbq.get_db_sites()
+
+	print(site_results)
 	
 	if request.method=="GET":
 		return render_template("site_mgmt.html", sites=site_results, states=data.get_states())
