@@ -2,12 +2,12 @@
 -- Description: provides a location for the table structure of the base entities for the CIMDB
 
 -- initialization of database
-UNLOCK tables;
+-- UNLOCK tables;
 
 -- Commented this out to run correctly on PHPMyAdmin
 -- CREATE DATABASE IF NOT EXISTS cs340_hollaasa_cimdb;
 -- USE cimdb;
-SHOW tables;
+-- SHOW tables;
 
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `ProductsRegularComps`;
