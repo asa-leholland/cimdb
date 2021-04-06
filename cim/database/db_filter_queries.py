@@ -4,9 +4,6 @@
 # connect to databse
 import cim.database.db_connector as db
 
-# Create a connection to the database
-db_connection = db.connect_to_database()
-
 
 def filter(filter_query_to_run, data_to_filter):
 	"""

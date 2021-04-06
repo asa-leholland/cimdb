@@ -4,9 +4,6 @@
 # connect to database
 import cim.database.db_connector as db
 
-# Create a connection to the database
-db_connection = db.connect_to_database()
-
 
 def update(update_query_to_run):
 	"""
