@@ -9,9 +9,6 @@ from cim.dummy_data import DummyData
 import cim.database.db_connector as db
 
 
-# Create a connection to the database
-db_connection = db.connect_to_database()
-
 # instantiate the dummy data in case database server data does not load properly
 data = DummyData()
 
@@ -130,6 +127,7 @@ def get_db_sites():
 
 	# Check if the query was successful: if it returned content we are good. If not, use the dummy dataset instead.
 	if len(site_results) == 0:
+		print('uhoh, we are using the old data')
 		site_results = data.get_sites()
 
 	return site_results
@@ -149,8 +147,8 @@ def get_db_locations():
 	FROM Locations 
 	INNER JOIN Sites 
 	ON Locations.location_site_id=Sites.site_id
-	WHERE Locations.location_id <> 1 # ignore location 1 (shipped to customer)
-	OR Sites.site_id <> 1 # ignore site 1 (shipped to customer)
+	WHERE Locations.location_id <> 1 
+	OR Sites.site_id <> 1 
 	;"""
 	db_connection = db.connect_to_database()
 	cursor = db.execute_query(db_connection=db_connection, query=query)
