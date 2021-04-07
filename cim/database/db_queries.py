@@ -55,7 +55,7 @@ def get_db_regular_components():
 	RegularComponents.rc_pn,
 	RegularComponents.rc_pn_desc,
 	RegularComponents.rc_category,
-	SUM(LocationsRegularComps.lrc_quantity) AS TotalQuantity,
+	LocationsRegularComps.lrc_quantity AS TotalQuantity,
 	Locations.location_room_number AS RoomNumber,
 	Locations.location_shelf_number AS ShelfNumber,
 	Sites.site_address_city AS SiteCity
@@ -63,7 +63,7 @@ def get_db_regular_components():
 	INNER JOIN LocationsRegularComps ON RegularComponents.rc_pn=LocationsRegularComps.lrc_rc_pn
 	INNER JOIN Locations ON Locations.location_id=LocationsRegularComps.lrc_location_id
 	INNER JOIN Sites ON Locations.location_site_id=Sites.site_id
-    GROUP BY RegularComponents.rc_pn;
+    GROUP BY RegularComponents.rc_pn, Locations.location_room_number, Locations.location_shelf_number, Sites.site_address_city,LocationsRegularComps.lrc_quantity;
 	"""
 	db_connection = db.connect_to_database()
 	cursor = db.execute_query(db_connection=db_connection, query=query)
