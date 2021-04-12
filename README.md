@@ -70,7 +70,7 @@ python run.py
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
+[example-use]: cimdb_use.gif
 
 
 <!-- ROADMAP -->
@@ -120,5 +120,5 @@ Project Link: [https://github.com/team-cs-cats/cimdb](https://github.com/team-cs
 
 
 <!-- MARKDOWN LINKS & IMAGES (to be added as needed) -->
-<!-- [example-use]: images/{filename}.gif -->
+
 
