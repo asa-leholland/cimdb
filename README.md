@@ -10,7 +10,7 @@ Web-based CRUD database.
 This class project was built for Oregon State's CS340 Databases class in Winter 2021.
 
 <!-- The project is hosted live on Heroku at https://team-cs-cats.herokuapp.com/ -->
-The project is hosted live at http://flip2.engr.oregonstate.edu:5147/
+<!-- The project is hosted live at http://flip2.engr.oregonstate.edu:5147/ -->
 
 
 <!-- **Note: When loading the hosted website, please be patient as it takes several seconds for the Heroku server to spin up and load the site files.** -->
