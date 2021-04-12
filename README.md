@@ -14,7 +14,9 @@ The project is hosted live at http://flip2.engr.oregonstate.edu:5147/
 
 
 <!-- **Note: When loading the hosted website, please be patient as it takes several seconds for the Heroku server to spin up and load the site files.** -->
-
+<!-- USAGE EXAMPLES -->
+## Usage
+![example-use](cimdb_use.gif)
 
 <!-- ### Built With -->
 ### Built With
@@ -68,9 +70,6 @@ python run.py
 7. On your browser, navigate to `http://localhost:5147/`. This will update to saved changes in your local directory upon refresh.
 8. Occasionally, some of the built-in resources (particularly the javascript scripts) of this project do not update when reloading changes made to files. To bypass these errors, reload the web page and bypass the cache. This can be done using the `Shift + left click Reload button` on Firefox or by entering developer mode on Google Chrome and selecting the `Empty Cache and Hard Reload` option.
 
-<!-- USAGE EXAMPLES -->
-## Usage
-[example-use]: cimdb_use.gif
 
 
 <!-- ROADMAP -->
